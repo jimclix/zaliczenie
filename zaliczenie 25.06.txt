@@ -1,0 +1,40 @@
+2. Jakimi poleceniami zbadałbyś status zmian w repozytorium git, następnie dodał brakujące
+pliki(wszystkie), potwierdził i wysłał do zdalnego repozytorium(adres dowolny)?
+
+
+git status
+git add .
+git commit -m "status 25.06 z 9:30"
+(zakładamy nowe repo na github, np. egzamin.git)
+git remote add origin https://github.com/testowy/egzamin.git
+git push https://github.com/testowy/egzamin.git 
+
+//lub 
+git push origin master
+
+
+
+
+
+
+3. Gdyby plik CoffeShop.xlsx był tabelką, jak napisałbyś zapytania do poniższych zleceń:
+	a. Pokaż wszystkie dane o sprzedaży kawy Latte i Long Black bez sprzedaży w Philadelfii
+
+		SELECT
+		*
+		FROM Sales20192021
+		WHERE Product='Latte' OR Product='Long Black' AND City<>'Philadelphia'
+
+ 
+	
+	b. Pokaż kawy kupione przez william thompson_86 i mark taylor_113
+
+		SELECT Product
+		FROM Sales20192021
+		WHERE Customer_ref='thompson_86' OR Customer_ref='mark taylor_11'
+
+	c. Pokaż miasta gdzie zakupiono Capuccino i Flat White
+
+		SELECT City
+		FROM Sales20192021
+		WHERE Product='Capuccino' OR Product='Flat White'
